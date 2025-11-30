@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NGESI BOT B2 — NGESI ROBOTICS</title>
+
+<!-- Colors: Blue, White, Green -->
+<style>
+  :root{
+    --blue:#0A4FF5;
+    --green:#0ECF72;
+    --white:#ffffff;
+    --dark:#0b0b0b;
+    --muted:#6b7280;
+    --max-width:1100px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+    color:var(--dark);background:#f6fbff;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:1000;
+    background:var(--white);box-shadow:0 2px 6px rgba(10,75,245,0.06);
+  }
+  .container{max-width:var(--max-width);margin:0 auto;padding:0 16px;}
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;padding:14px 0;
+  }
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo-mark{
+    width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--blue),#2158ff);
+    display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;
+  }
+  .brand h1{font-size:18px;margin:0}
+  nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+  nav a{color:var(--dark);text-decoration:none;font-weight:600}
+  .cta{background:var(--green);color:white;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
+
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--white),#f0f7ff);padding:36px 0}
+  .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;max-width:var(--max-width);margin:0 auto;padding:0 16px}
+  .hero h2{font-size:28px;margin:0 0 10px}
+  .hero p{color:var(--muted);margin:0 0 18px}
+  .card{background:var(--white);border-radius:14px;padding:18px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+  .profile-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:6px solid #f3f8ff}
+
+  /* sections */
+  section{padding:48px 0}
+  .section-title{font-size:22px;margin:0 0 18px}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+
+  /* download button */
+  .download-btn{display:inline-block;background:var(--blue);color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+
+  /* floating vertical action buttons */
+  .float-vert{position:fixed;left:10px;top:35%;z-index:1200;display:flex;flex-direction:column;gap:10px}
+  .fv-btn{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:white;text-decoration:none;box-shadow:0 6px 20px rgba(2,6,23,0.12)}
+  .fv-wa{background:#25D366}
+  .fv-call{background:var(--blue)}
+  .fv-label{font-weight:700;font-size:14px}
+
+  /* footer */
+  footer{background:#05204e;color:white;padding:24px 0}
+  footer .foot-inner{display:flex;flex-direction:column;gap:8px;align-items:center}
+
+  /* mobile */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:18px}
+    nav ul{display:none}
+  }
+
+  /* contact form */
+  form{display:grid;gap:10px}
+  input,textarea{padding:10px;border-radius:8px;border:1px solid #e6eefc;font-size:14px}
+  button[type="submit"]{background:var(--green);border:none;padding:10px 12px;border-radius:8px;color:white;font-weight:700;cursor:pointer}
+  .muted{color:var(--muted)}
+  .disclaimer{background:#f1fbff;padding:18px;border-radius:10px;border:1px solid #e7f3ff;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo-mark">NB</div>
+      <div>
+        <h1 style="margin:0">NGESI BOT B2</h1>
+        <div style="font-size:12px;color:var(--muted)">NGESI ROBOTICS</div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#disclaimer">Disclaimer</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+
+    <a class="cta" href="#download">Download</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-grid">
+    <div>
+      <h2>NGESI BOT B2 — Scalping & Automation</h2>
+      <p>High-performance scalping bot for XAUUSD, EURUSD, AUDUSD and more. Built for fast entries, safe stop-loss handling and simple configuration.</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="download-btn" id="downloadLink" href="/download/ngesi-bot-b2.zip" download>Download Bot</a>
+        <a href="#contact" style="display:inline-block;padding:12px 16px;border-radius:10px;background:var(--white);color:var(--blue);font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(10,75,245,0.06)">Contact Us</a>
+      </div>
+
+      <div style="margin-top:18px;color:var(--muted)">Version: 1.0 • Last update: 2025</div>
+    </div>
+
+    <div>
+      <div class="card" style="text-align:center">
+        <img class="profile-img" src="https://via.placeholder.com/300x300.png?text=NGESI" alt="profile">
+        <h3 style="margin:12px 0 4px">NGESI ROBOTICS</h3>
+        <div class="muted">Developer • Algo Trading • Automation</div>
+        <div style="margin-top:12px">
+          <a class="download-btn" href="/download/ngesi-bot-b2.zip" download>Download .zip</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container">
+  <h3 class="section-title">About</h3>
+  <div class="card" style="padding:18px">
+    <p>NGESI ROBOTICS builds custom trading automation including Expert Advisors and connectors. NGESI BOT B2 is a lightweight scalping tool optimized for low-latency entry and reliable risk controls. Use on demo accounts first.</p>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="container">
+  <h3 class="section-title">Download</h3>
+  <div class="card">
+    <p class="muted">Click below to download the bot package. Make sure you run it on demo first and set your broker/timeframe according to README included in the package.</p>
+    <div style="margin-top:12px">
+      <!-- Replace href with actual hosted file link if using MediaFire/Drive -->
+      <a class="download-btn" href="/download/ngesi-bot-b2.zip" id="dlBtn" download>Download NGESI BOT B2 (.zip)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section id="disclaimer" class="container">
+  <h3 class="section-title">Disclaimer</h3>
+  <div class="disclaimer">
+    <strong>Important:</strong> NGESI ROBOTICS provides software tools only. We do not provide investment advice. Trading involves risk; past performance is not indicative of future results. Users are solely responsible for their trading decisions and must ensure compliance with local laws and broker rules.
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container">
+  <h3 class="section-title">Contact</h3>
+  <div style="display:grid;grid-template-columns:1fr 360px;gap:18px">
+    <div class="card">
+      <h4 style="margin-top:0">Get in touch</h4>
+      <p class="muted">For support, setup, customization and licensing — contact us.</p>
+
+      <p style="margin:8px 0"><strong>Email:</strong> <a href="mailto:MAIL@example.com">MAIL@example.com</a></p>
+      <p style="margin:8px 0"><strong>Phone:</strong> <a href="tel:+YOUR_PHONE_NUMBER">+YOUR_PHONE_NUMBER</a></p>
+      <p style="margin:8px 0"><strong>WhatsApp:</strong> <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+
+    <div class="card">
+      <h4 style="margin-top:0">Quick Feedback</h4>
+      <form id="feedbackForm" action="mailto:MAIL@example.com" method="post" enctype="text/plain" onsubmit="return sendMail();">
+        <input id="name" name="name" placeholder="Your name" required>
+        <input id="email" name="email" type="email" placeholder="Your email" required>
+        <textarea id="message" name="message" rows="5" placeholder="Your message or feedback" required></textarea>
+        <button type="submit">Send Feedback</button>
+        <div id="formNote" class="muted" style="font-size:13px;margin-top:8px">This will open your email client. Or use WhatsApp for instant reply.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK (anchor for list) -->
+<section id="feedback" class="container">
+  <h3 class="section-title">User Feedback</h3>
+  <div class="card">
+    <p class="muted">No public feedback yet. Once users send messages, you can paste highlights here.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container foot-inner">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="logo-mark" style="width:44px;height:44px">NB</div>
+      <div>
+        <div style="font-weight:700">NGESI ROBOTICS</div>
+        <div style="font-size:13px;color:#bcd4ff">© 2025 NGESI ROBOTICS — All Rights Reserved</div>
+      </div>
+    </div>
+
+    <div style="margin-top:8px;color:#bcd4ff;font-size:13px">Built with care • Use demo accounts • Replace placeholders with your real contact info</div>
+  </div>
+</footer>
+
+<!-- Floating vertical -->
+<div class="float-vert" aria-hidden="false">
+  <a class="fv-btn fv-wa" id="waBtn" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%20NGESI%20Robotics" target="_blank">
+    <!-- whatsapp svg -->
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M20.52 3.48a11.9 11.9 0 1 0-16.84 16.84l-1.5 4.95 4.95-1.5A11.9 11.9 0 0 0 20.52 3.48zm-9.03 17.06c-3.25 0-6.28-1.05-8.67-2.81l-.62-.4 1.14-3.75-.74-1.2a9.5 9.5 0 1 1 9.89 8.16zM17.5 14.1c-.28-.14-1.65-.82-1.9-.91-.25-.09-.43-.14-.62.14-.19.28-.71.91-.87 1.1-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.31.42-.47.14-.16.18-.28.28-.46.09-.19.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.04-.22-.53-.45-.46-.62-.47l-.53-.01c-.18 0-.47.07-.72.34-.25.28-.97.94-.97 2.3 0 1.36.99 2.68 1.13 2.86.14.19 1.96 3 4.74 4.17 1.24.53 2.2.84 2.96 1.07.78.24 1.49.2 2.05.12.63-.09 1.65-.67 1.88-1.32.22-.64.22-1.18.15-1.32-.07-.14-.25-.21-.53-.35z"/></svg>
+    <span class="fv-label">WhatsApp</span>
+  </a>
+
+  <a class="fv-btn fv-call" id="callBtn" href="tel:+YOUR_PHONE_NUMBER">
+    <!-- phone svg -->
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+    <span class="fv-label">Call</span>
+  </a>
+</div>
+
+<!-- Scripts -->
+<script>
+  // Smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const target = document.querySelector(a.getAttribute('href'));
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    });
+  });
+
+  // Feedback form: open mail client (best-effort)
+  function sendMail(){
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const to = 'MAIL@example.com'; // replace with your email
+    const subject = encodeURIComponent('Feedback from ' + name);
+    const body = encodeURIComponent('Name: '+name+'%0AEmail: '+email+'%0A%0AMessage:%0A'+message);
+    window.location.href = 'mailto:'+to+'?subject='+subject+'&body='+body;
+    return false; // stop normal submit
+  }
+
+  // Replace default download link if user left placeholder
+  (function(){
+    const dl = document.getElementById('downloadLink');
+    // If the href is the placeholder, you may replace with hosted link programmatically here
+  })();
+
+  // NOTE: Replace 'YOUR_PHONE_NUMBER' in HTML with your actual number (e.g. 255712345678 for Tanzania)
+</script>
+
+</body>
+</html>
